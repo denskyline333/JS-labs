@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>  
+  <meta charset="utf-8" />
+ <title>SVG</title>
+</head>
+
+<body>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" />
+
+
+    <svg>
+        <polyline points="5,135 30,5 55,135 80,5, 105,135
+130,5, 155,135 180" fill="skyblue" fill-rule="nonzero" fill-opacity=".7"
+                  stroke="yellowgreen" stroke-width="2%" transform="skewY(-10)"></polyline>
+    </svg>
+    <svg width="200" height="200">
+        <g fill="none" stroke-width="15">
+            <circle r="40" cx="60" cy="60"
+                    stroke="crimson"
+                    stroke-opacity=".7" />
+            <circle r="55" cx="100" cy="100"
+                    stroke="orangered"
+                    stroke-opacity=".5" />
+            <circle r="40" cx="140" cy="140"
+                    stroke="gold"
+                    stroke-opacity=".25" />
+        </g>
+    </svg>
+<
+    <svg width="330" height="140">
+        <ellipse rx="110" ry="30" cx="115" cy="70" fill="gold"
+                 stroke="orange" stroke-width="5" transform="rotate(-23 115 70)" />
+    </svg>
+    <svg width="120" height="240">
+        <defs>
+            <linearGradient id="Gradient1">
+                <stop stop-color="red" offset="0%" />
+                <stop stop-color="black" offset="50%" />
+                <stop stop-color="blue" offset="100%" />
+            </linearGradient>
+        </defs>
+      </svg>
+    <svg width="1000" height="320">
+        <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#Gradient1)">
+            <animateTransform attributeName="transform" begin="click" attributeType="XML"
+                              type="scale" from="1" to="2" dur="3s" />
+            </rect>
+    </svg>
+   
+</body>
+</html>

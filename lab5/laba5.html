@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>Моя первая страница </title>
+<link rel="stylesheet" type="text/css" href="a.css">
+<style>
+p:first-line{
+text-decoration:underline;}
+p:first-letter{
+font-size:300%;
+color:red;}
+.block :first-child{
+color: hsla(201, 35%, 46%,0.7);
+background-color: rgba(76, 158, 127,0.2)}
+#n1{list-style-type:upper-latin;
+font-family:calibri;
+color:purple;
+text-shadow:3px 2px #FFAE00;}
+#n2{list-style-type:upper-latin;
+color:orangered;}
+#n3{list-style-type:upper-latin;
+font-family:Tahoma;
+color:green;
+text-shadow:1px 1px 10px #FFAE00;}
+#n4{list-style-image: url(marker1.png);
+}
+
+#qwe{
+color:blue;
+font-size:17pt;
+word-spacing: 1px;
+font-family:Calibri;
+}
+#qwr{
+color:yellow;
+text-decoration:overline;
+}
+#qwt{
+color:red;
+font-style:oblique;}
+#qwy{
+color:green;
+font-family:serif;
+font-size:120%;
+}
+
+
+.link:link {
+    color: red; 
+   }
+.link:visited {
+    color: blue; 
+   }
+.link:active {
+    color: lime; 
+   } 
+ table{
+ background: Thistle;
+ color:Brown;
+ text-align:center;
+ border:4px solid black;
+ border-collapse: collapse;
+ font-family:cursive;
+ }
+ td{
+ font-size:100%;
+ padding: 2px; 
+ border: 2px solid green; 
+ }
+@font-face {
+font-family: Pompadur;
+src: url(Pompadur.ttf); 
+ }
+ .turn:hover{
+-webkit-transform: translate(50px,100px);
+}
+.red {
+background: radial-gradient(circle ,orange,green);
+}
+.st:before{content:"студент 1 курса,";}
+.ad:before{content:"(Проживающий по адресу: г.Минск, ул Белорусская 21)";}
+
+</style>
+<script type="text/javascript">
+function fun1() {
+var stroka,abc = "   "
+for (var i = 1; i < document.all.length; i++) {
+var child = document.all[i];
+stroka += abc + child.tagName;
+}
+alert(stroka);
+}
+
+function fun2() {
+var stroka, abc = " "
+for (var i = 0; i < document.body.childNodes.length; i++) {
+var child = document.body.childNodes[i]
+stroka += abc + child.tagName;
+}
+alert(stroka);
+}
+
+function fun3() {
+var stroka = "",  abc = "   "
+for (var i = 1; i < document.all[28].childNodes.length; i++) {
+var child = document.all[29].childNodes[i]
+stroka+=child.innerHTML+abc;
+}
+alert(stroka);
+}
+
+function fun4() {
+var str = "", prob = " "
+for (var i = 0; i < document.getElementsByTagName('span')[0].childNodes.length; i++) {
+var child = document.getElementsByTagName('span')[0].childNodes[i]
+if (child.innerHTML!=undefined) str+=child.innerHTML+prob;
+str+=(child.tagName+prob);
+}
+alert(str);
+}
+
+function fun5() {
+var str = "", abc = " "
+for (var i = 0; i < document.getElementById('sp').childNodes.length; i++) {
+var child = document.getElementById('sp').childNodes[i]
+if (child.innerHTML!=undefined) str+=child.innerHTML+abc;
+}
+alert(str);
+}
+
+function fun6(){	
+var phys=6;
+var math=4;
+var oit=4;
+var oaip=8;
+var alocvm=4;
+var avrg=(phys+math+oit+oaip+alocvm)/5;
+alert( avrg);
+document.getElementsByTagName("span")[1].innerHTML=avrg;
+}
+
+
+</script>
+<input type='button' value='Задание 1' onclick='fun1()' /><br>	
+<input type='button' value='Задание 2' onclick='fun2()' /><br>
+<input type='button' value='Задание 3.1' onclick='fun3()' /><br>
+<input type='button' value='Задание 3.2' onclick='fun4()' /><br>
+<input type='button' value='Задание 3.3' onclick='fun5()' /><br>
+<input type='button' value='Задание 4' onclick='fun6()' />
+</head>
+<body bgcolor="Honeydew">
+<h1 align="center">Я,<a class="st"> </a><a class="link" href="22.html">Калач Денис Дмитриевич</a><a class="ad"> </a>, изучаю <div class="red">HTML и CSS.</div> </h1>
+<h2 align="center"><font size="7">Текст</font></h2>
+<h3 align="center">Что такое HTML</h3>
+<div class="block">
+<div>
+<p style="font-family: Times;
+color: green;
+border-radius: 100px;
+text-align: left;
+word-spacing: 20px;
+letter-spacing: 7px;
+font-size: 120%;"><b>HTML <span style="font-size: 120%; letter-spacing:2px; font-family: Verdana, Arial, Helvetica, sans-serif; 
+  color: #800080" id='sp'>(Hyper Text Markup Language) – язык разметки гипертекста.</span> Для разметки HTML документа используют теги (флаги разметки).<br>
+Тег – это определенная последовательность символов, заключенные между знаками < (больше) и > (меньше).<br>Параметры документа задаются через тег BODY.</b>
+</p></div>
+<h3 align="center">Подключение CSS</h3>
+
+<p style="font-family:serif;
+color: #FA8E47;
+background-color: rgba(206, 180, 79, 0.3);
+box-shadow: 0 0 30px rgba(100,0,50,0.5);
+text-align: center;
+border-radius: 0 50px 0 50px;
+background: radial-gradient(circle, lightskyblue, yellow);
+word-spacing: 15px;
+letter-spacing: 5px;
+font-size: 15pt;
+font-style: italic">Внешнее. Самый мощный и удобный способ определения стилей и правил для сайта. Стили хранятся в отдельном файле,<br> который может быть использован для любых веб-страниц.
+ Для подключения таблицы связанных стилей используется тег <span id="qwe">link в заголовке страницы.</span><br><span id="qwr">Внутреннее. Стиль определяется</span> в самом 
+документе и обычно располагается в заголовке веб-страницы.</p></div>
+
+<h3 align="center"> CSS</h3>
+
+<p style="font-family:Pompadur;
+color: hsla(288, 35%, 46%,0.5);
+text-align:right;
+box-shadow: 0 0 10px rgba(0,255,0,0.5);
+background: linear-gradient(to top, #fefcea, #f1da36);
+word-spacing: 20px;
+letter-spacing: 5px;
+font-size: 100%">По своей гибкости и <span id="qwt">возможностям этот способ использования</span> стиля уступает предыдущему, но также позволяет размещать все стили в одном месте.<br> В данном случае, прямо в теле документа. Определение стиля задается тегом style.
+Строковое. Внутренний стиль являются по существу расширением для одиночного тега,<br> используемого на веб-странице. Для определения стиля используется атрибут style, <span id="qwy">а его значения указываются </span>с помощью языка таблицы стилей.
+</p>
+
+<h3 align="center"><font size="6">Список</font></h3>
+<ol><div id="n1"><li>Лабы на 1 курсе</li>
+<UL TYPE="disc">
+<li>Оит.</li>
+<li>Оаип.</li>
+<li>Физика.</li></ul></div>
+<div id="n2">
+<li>Зачеты 1 курс</li>
+<UL type="square">
+<li>История</li>
+<li>Белорусский язык</li>
+<li>Английский язык</li></ul></div>
+<div id="n3">
+<li>Экзамены 1 курс</li>
+<Ul type="circle">
+<li>Математика</li>
+<li>Физика</li>
+<li>АЛОЦВМ</li></ul></div></ol>
+
+<p6> Список с маркером:
+<ul>
+<div id="n4" class="turn">
+<li>картофель</li>
+<li>перец</li>
+<li>морковь</li></ul></p6></div>
+
+<h2 align="center">ТАБЛИЦА СЕССИИ</h2>
+<div class="tb"><table align="center" border="1">
+
+<tr> 
+<td align="center" width="150" height="50">ФИО</td>
+<td align="center" colspan="3" width="280" height="50"><b><a class="link" href="22.html">Калач Денис<a/></b></td>
+</tr>
+
+<tr>
+<td width="150" height="120" ><img src="denis.jpg" WIDTH=150 HEIGHT=120></td>
+<td align="center" colspan="3"> Белорусская 21, город Минск</td>
+</tr>
+
+<tr>
+<td  align="center" rowspan="6" width="150" height="250">1 CЕМЕСТР</td>
+<td  align="center" width="150" height="25"> Дата</td>
+<td  align="center" width="150" height="25"> Предмет</td>
+<td  align="center" width="150" height="25"> Оценка</td>
+</tr>
+
+<tr>
+<td align="center" width="50" height="25">31.12.2016</td>
+<td align="center"> Физика</td>
+<td align="center" id="phys"> 6</td>
+</tr>
+<tr>
+<td  align="center" width="50" height="25">5.01.2017</td>
+<td align="center"> Оаип</td>
+<td align="center" id="oaip"> 8</td>
+</tr>
+
+<tr>
+<td align="center" width="50" height="25">11.01.2017</td>
+<td align="center"> ОИТ</td>
+<td align="center" id="oit"> 4</td>
+</tr>
+<td align="center" width="50" height="25">16.01.2017</td>
+<td align="center"> Математика </td>
+<td align="center" id="math"> 4</td>
+
+<tr>
+<td align="center" width="50" height="25">22.01.2017</td>
+<td align="center"> АЛОЦВМ</td>
+<td align="center" id="alocvm"> 4</td>
+</tr></div>
+</body>
+</html>

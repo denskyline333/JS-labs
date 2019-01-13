@@ -1,0 +1,56 @@
+<html>
+<head>
+<style>
+div {font-size:70; }    
+</style>
+</head>
+<body>
+<div id="snd" style="position:absolute;"  onmousedown="startMove(event, 2)" onmousemove="move(event, 2)" onmouseup="stopMove()">задание 1</div>
+<img src=g2.jpg width="200px" height="200px" id="fst" style="position:absolute; top:200; left: 800;"  onmousedown="startMove(event, 1)" onmousemove="move(event, 1)" onmouseup="stopMove()">
+
+<script>
+
+var a;
+var drag;
+function startMove(event, numb){
+drag = true;                  //  перетаскивание началось
+x2 = event.clientX;        //запоминаем начальное X курсора 
+y2 = event.clientY;        //запоминаем начальное Y курсора 
+                
+if (numb == 1) a = document.getElementById('fst');
+else if (numb == 2) a = document.getElementById('snd');
+                
+a.style.marginLeft = "0px";
+a.style.marginRight = "0px";
+a.style.marginTop = "0px";
+a.style.marginBottom = "0px";
+                
+a.style.left = center_window.offsetTop;
+a.style.top = center_window.offsetLeft;
+}
+
+function move(event, numb){
+// проверяем началось ли перетаскивание
+if (drag == true){
+x1 = event.clientX;    // определяем текущую позицию курсора по Х
+y1 = event.clientY;    // определяем текущую позицию курсора по Y
+
+shift_x = x1-x2                 // вычисляем разницу (сдвиг) между текущими и 
+shift_y = y1-y2                // предыд. позициями курсора 
+// сдвигаем объект
+if (numb == 1)  {
+document.getElementById('fst').style.left = fst.offsetLeft + shift_x
+document.getElementById('fst').style.top = fst.offsetTop + shift_y
+x2 = x1; y2 = y1;      // запоминаем предыдущие координаты курсора
+}
+else if (numb == 2)  {
+document.getElementById('snd').style.left = snd.offsetLeft + shift_x
+document.getElementById('snd').style.top = snd.offsetTop + shift_y
+x2 = x1; y2 = y1;      // запоминаем предыдущие координаты курсора
+}
+}
+}	
+function stopMove() { drag = false; }
+</script>
+</body>
+</html>

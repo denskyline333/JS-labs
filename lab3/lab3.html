@@ -1,0 +1,112 @@
+<html>
+<head>
+<script type="text/javascript">
+function fun1(){
+  var a = 456, b = 65, c = 545, d = 23;
+            var myArray = [a, b, c, d];
+            var min = myArray[0];
+            var max = min;
+            var maxnumber, minnumber;
+            var i;
+            for (i = 1; i < myArray.length; ++i) {
+                if (myArray[i] > max) {
+                    max = myArray[i];
+                    maxnumber = i;
+                }
+                if (myArray[i] < min) {
+                    min = myArray[i];
+                    minnumber = i;
+                }            }
+            document.write("максимальное число в массиве - " + max + " с номером " + maxnumber);
+            document.write("<br> минимальное число в массиве - " + min + " с номером " + minnumber);
+}
+ function fun1() {
+            var array = ['log', 'pow', 'pop', 'push', 'shift', 'round', 'floor', 'sline', 'sort', 'concat'];
+            var aar = new Array();
+            var mas = new Array();
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == 'log') aar.push(array[i]);
+                if (array[i] == 'pow') aar.push(array[i]);
+                if (array[i] == 'pop') mas.push(array[i]);
+                if (array[i] == 'push') mas.push(array[i]);
+                if (array[i] == 'shift') mas.push(array[i]);
+                if (array[i] == 'round') aar.push(array[i]);
+                if (array[i] == 'floor') aar.push(array[i]);
+                if (array[i] == 'sline') mas.push(array[i]);
+                if (array[i] == 'sort') mas.push(array[i]);
+                if (array[i] == 'concat') mas.push(array[i]);
+            }
+            document.write('Исходный массив:', "<br>");
+            for (var i = 0; i < array.length; i++) {
+                document.write('array[', i, ']=', array[i], " =", array[i].length, '<br>');
+            }
+            document.write("<br>", 'Методы объекта Math:', "<br>");
+            for (var i = 0; i < aar.length; i++) {
+                document.write('aar[', i, '] = ', aar[i], " =", aar[i].length, '<br>');
+            }
+            aar.splice(0, 3,"what"); // удаляет с нулевого 3 элемента и добавляет элемент
+            document.write("<br>", 'Методы объекта Math:', "<br>");
+            for (var i = 0; i < aar.length; i++) {
+                document.write('aar[', i, '] = ', aar[i], " =", aar[i].length, '<br>');
+            }
+            document.write("<br>", 'Методы объекта Array:', "<br>");
+            for (var i = 0; i < mas.length; i++) {
+                document.write('mas[', i, '] = ', mas[i], " =", mas[i].length, '<br>');
+            }
+        }
+
+function fun3(){ 
+mystring = new String ("Калач Денис Дмитриевич") 
+document.write(mystring,"<br>",'Длина строки = ',mystring.length,"<br>");
+document.write("ФИО в нижнем регистре - ",mystring.toLowerCase(),"<br>"); 
+document.write("ФИО в верхнем регистре - ",mystring.toUpperCase (),"<br>");
+document.write("Объединение строк: ",mystring.toLowerCase().concat(mystring.toUpperCase ()),"<br>");
+mystring=mystring.replace('Калач ','К');
+mystring=mystring.replace('Денис ','Д');
+mystring=mystring.replace('Дмитриевич','Д');
+document.write("Сокращенное ФИО - ",mystring);
+}
+
+function fun4(){ 
+x=new Date();
+document.write();
+document.write("<table border='1'>"); 
+document.write("<td>"+'Год'+"</td>");
+document.write("<td>"+x.getFullYear()+"</td>");
+document.write("</tr>");
+document.write("<td>"+'Месяц'+"</td>");
+document.write("<td>"+x.getMonth()+"</td>");
+document.write("</tr>");
+document.write("<td>"+'День'+"</td>");
+document.write("<td>"+x.getDate()+"</td>");
+document.write("</tr>");
+document.write("<td>"+'Час'+"</td>");
+document.write("<td>"+x.getHours()+"</td>");
+document.write("</tr>");
+document.write("<td>"+'Минуты'+"</td>");
+document.write("<td>"+x.getMinutes()+"</td>");
+document.write("</tr>");
+document.write("<td>"+'Секунды'+"</td>");
+document.write("<td>"+x.getSeconds()+"</td>");
+document.write("</tr>");
+document.write("</table>"); 
+}
+   
+      /*  function fun2() {
+           
+            var today = new Date();
+            today.setHours(15);
+            var date = new Date();
+            var a = new Date();
+            a = today-date;
+            alert("До 15.00 осталось "+Math.round(a/1000)+"секунд");
+        }*/
+</script>
+</head>
+<body>
+<input type='button' value='Задание 1' onclick='fun1()' />
+<input type='button' value='Задание 2' onclick='fun2()' />
+<input type='button' value='Задание 3' onclick='fun3()' />
+<input type='button' value='Задание 4' onclick='fun4()' />
+</body>
+</html>

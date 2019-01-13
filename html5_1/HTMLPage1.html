@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>html5</title>
+    <style>
+
+        audio{
+            margin-left:800px;
+        }
+        p{
+            margin-left:870px;
+            font-size:150%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function getCoordinates() {
+            navigator.geolocation.getCurrentPosition(showCoordinates);
+        }
+        function showCoordinates(position) {
+            document.write("Широта:" + position.coords.latitude + "<br/>");
+            document.write("Долгота:" + position.coords.longitude);
+        }
+    </script>
+    <h1 align="center">Я,<mark>Калач Денис Дмитриевич</mark>, изучаю HTML5</h1>
+    <video src="hltv.avi" width="400" height="400" controls="controls"></video>
+    <p>музыка</p>
+    <audio src="voicians.mp3" controls="controls"></audio>
+    <br />
+    <p1>Для считывания координат нажмите на кпопку</p1>
+    <input type="button" value="Координаты" onclick="getCoordinates()" />
+</body>
+</html>

@@ -1,0 +1,40 @@
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size:130%;
+	background: #e6e6e6;
+}
+
+/*
+.btn {
+		display: inline-block;
+		border-radius: 2px;
+		height: 250px;
+		padding: 0;
+		margin-top: 40%;
+		margin-bottom: 5px;
+		width: 100%;
+		background-color: transparent;
+		color: #2a2a2a;
+		border: 5px solid #2a2a2a;
+		font-size:50px;
+		transition: 0.3s ease-in;
+
+	}
+	.btn:hover{
+		color:#e6e6e6;
+		background: #2a2a2a;
+
+		transition: 0.3s ease-in;
+	}
+
+	.center{
+		margin: auto;
+		width: 20%;
+
+	}
+
+	<div class="center">
+		<input class="btn" type='button' value='button' onclick='button()' />
+	</div>
+	*/

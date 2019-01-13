@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Лаба 1</title>
+<script type='text/javascript'>
+var name, x1=5, x2=10, y1='stroka',y2='stroka2', x=12, y=17, z1, z2, d;
+
+function fun1() {
+ alert("Вас приветствует учебный центр");
+ name=prompt("Введите Ваше имя:");
+ alert("Добро пожаловать на наши курсы, "+name);
+ if (confirm("Хотите стать Web-дизайнером?"))
+{
+ alert("Учите CSS");
+}
+else {
+alert("Теряете время!");
+}
+}
+function fun2(){
+document.write('x1=',x1,' x2=',x2,' x1+x2=',x1+x2);
+}
+function fun3(){
+document.write('y1=',y1,' y2=',y2,' y1+y2=',y1+y2);
+}
+function fun4(){
+document.write('x1=',x1,' y1=',y1,' x1+y1=',x1+y1);
+}
+function fun5(){
+document.write('y2=',y2,' x2=',x2,' y2+x2=',y2+x2);
+}
+function fun6(){
+	alert("Результатом сложения строки и числа всегда будет строка.");
+}
+function fun7(){
+z1=(35*y-25*x)/5+322;
+document.write('z1=',z1);
+alert(z1);
+}
+function fun8(){
+z2=(8*y)/(x+5);
+document.write('z2=',z2);
+alert(z2);
+}
+function fun9(){
+z1=(35*y-25*x)/5+322;
+z2=(8*y)/(x+5);
+document.write('z1=',z1,' z2=',z2,' z1%z2=',z1%z2);
+alert(z1%z2);
+}
+function fun10(){
+x=prompt("Введите любое число:",'0');
+if (x<20 || x>40 && x!=15 && x%5==0)
+{
+alert("Правильное значение");
+}
+else {
+alert("Неправильное значение");
+}}
+function fun11(){
+x=prompt('Введите любое число A:', ',,5');
+y=prompt('Введите любое число B:', '');
+if (x>y)
+{alert('A больше B');}
+else if (x<y)
+{alert('A меньше B');}
+else 
+{alert('A=B');}
+}
+function fun12(){
+d=prompt("Какой сегодня день недели?(Введите номер)",'0');
+switch(d) {
+case '1': alert('понедельник');break;
+case '2': alert('вторник');break;
+case '3': alert('среда');break;
+case '4': alert('четверг');break;
+case '5': alert('пятница');break;
+case '6': alert('суббота');break;
+case '7': alert('воскресенье');break;
+default: alert( 'Введите номера 1-7');
+}
+}
+function fun13(){
+try {
+num1;
+num2;
+}
+catch(error){
+alert("ошибкa");
+}
+}
+</script>
+</head>
+<body>
+<input type='button' value='Задание 1' onclick='fun1()' /> 
+<input type='button' value='2(число+число)' onclick='fun2()' /> 
+<input type='button' value='2(строка+строка)' onclick='fun3()' />
+<input type='button' value='2(число+строка)' onclick='fun4()' />
+<input type='button' value='2(строка+число)' onclick='fun5()' />
+<input type='button' value='2(вывод)' onclick='fun6()' />
+<input type='button' value='3 (1-ая переменная)' onclick='fun7()' />
+<input type='button' value='3 (2-ая переменная)' onclick='fun8()' />
+<input type='button' value='3 (остаток)' onclick='fun9()' />
+<input type='button' value='Задание 4 ' onclick='fun10()' />
+<input type='button' value='Задание 5' onclick='fun11()' />
+<input type='button' value='Задание 6' onclick='fun12()' />
+<input type='button' value='Задание 7' onclick='fun13()' />
+
+</body>
+</html>

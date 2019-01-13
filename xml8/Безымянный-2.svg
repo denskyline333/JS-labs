@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Оценочная версия) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="270.933mm" height="203.2mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 27093.32 20320"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:maroon;stroke-width:423.33;stroke-miterlimit:22.9256}
+    .str0 {stroke:black;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil1 {fill:lime}
+    .fil0 {fill:#666666}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <path d="M7678.92 9075.34l11414.91 1604.26 0 9630.8 -11414.91 -1604.26 0 -9630.8z"/>
+    </clipPath>
+   <mask id="id1">
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="10526.96" y1="8838.79" x2="15732.78" y2="8838.79">
+   <stop offset="0" style="stop-opacity:0; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:white"/>
+  </linearGradient>
+    <rect style="fill:url(#id2)" x="10315.3" y="7338.9" width="5629.14" height="2999.78"/>
+   </mask>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2716395680528">
+   <g style="clip-path:url(#id0)">
+    <image x="7678.92" y="9075.34" width="11414.91" height="11235.06" xlink:href="Безымянный-2_Images\Безымянный-2_ImgID1.png"/>
+   </g>
+  </g>
+  <rect class="fil0" x="8856.85" y="10352.13" width="8546.03" height="7408.32"/>
+  <polygon class="fil1 str0" points="13129.87,12318.07 13821.86,12939.67 14513.86,13561.27 14249.54,14567.03 13985.22,15572.8 13129.87,15572.8 12274.52,15572.8 12010.2,14567.03 11745.88,13561.27 12437.88,12939.67 "/>
+  <path class="fil2 str1" style="mask:url(#id1)" d="M13129.87 7550.56c718.72,0 1369.45,288.39 1840.49,754.63 471.06,466.25 762.42,1110.37 762.42,1821.83l-20 0c0,-705.95 -289.09,-1345.07 -756.48,-1807.69 -467.38,-462.62 -1113.14,-748.77 -1826.43,-748.77 -713.29,0 -1359.05,286.15 -1826.43,748.77 -467.39,462.62 -756.48,1101.74 -756.48,1807.69l-20 0c0,-711.46 291.36,-1355.58 762.42,-1821.83 471.04,-466.24 1121.77,-754.63 1840.49,-754.63"/>
+ </g>
+</svg>

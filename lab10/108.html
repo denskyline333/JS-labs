@@ -1,0 +1,59 @@
+<html>
+    <head>
+    <script src='jquery.min.js'></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<style> p   {  
+font-size:45;
+color:red;
+}
+</style>
+</head>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#el1").mouseover(function(){
+                $(this).css("color","blue");
+            });
+            $("#el1").mouseout(function(){
+                $(this).css("color","red","40px");
+            });
+            
+            $("#el2").mouseover(function(){
+                $(this).css("font-size","60px");
+            });
+            $("#el2").mouseout(function(){
+                $(this).css("font-size","45px");
+            });
+            
+            $("#el3").click(function(){
+                $(this).attr("src","faze.jpg");
+            });
+            $("el3").click(function(){
+                $(this).attr("src","g2.jpg");
+            });
+            
+            $("#el4").click(function(){
+                i = document.getElementById("el4");
+                i.innerHTML="<img src = 'titan.jpg'  />";
+            });
+            
+            $("#el5").mouseover(function(){
+                $(this).css("width","200px");
+            });
+            $("#el5").mouseout(function(){
+                $(this).css("width","300px");
+            });
+             
+            $("#el6").dblclick(function(){
+                $(this).css("border","20px green  double");
+            });
+        });
+        </script>
+    <body>
+        <p id="el4">Появится картинка</p><br>
+        <p id="el1"> Меняется цвет</p><br>
+        <p id="el2"> Увеличится шрифт</p><br>
+        <img src="g2.jpg" src="g2.jpg" style="width:300px" id="el3"><br /><br><br><br><br>
+        <img src="rogue.jpg" style="width:300px" id="el5"><br />
+        <p id="el6">Рамка</p>
+    </body>
+</html>

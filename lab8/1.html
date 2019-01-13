@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Лаба 8</title>
+<style>
+
+ p   {  
+font-size:55;
+color:red;
+}
+</style>
+</head>
+<body>
+<div ondblclick=fun(this)><p onMouseOver=newColor(this) onMouseOut=oldColor(this) onclick=largeFont(this) > Изменяет цвет текста </p></div>
+<br><img src="faze.jpg" width="300" height="300" id="img_1" onClick="сolorСhange(this.id)">
+<div ondblclick=fun(this)><p  id='textChange' Onclick='textСhangeImage(this.id)' >Появится картинка</p></div><br><br>
+<img src="rogue.jpg" id="img_2" onMouseOver=neWidth(this) onMouseOut=oldWidth(this)>
+<script type="text/javascript">
+
+//Задание 1
+function newColor(obj)  {   obj.style.color="blue"; }
+function oldColor(obj)  {   obj.style.color="red"; }
+
+//Задание 2
+function largeFont(obj)  {   obj.style.fontSize=80; }
+
+//Задание 3
+function сolorСhange(id){
+var img = document.getElementById(id);
+if (img.src.indexOf("faze.jpg")>0)     
+img.src="g2.jpg"
+else    
+img.src="faze.jpg" }
+
+//Задание 4
+function textСhangeImage(id){
+var fail = document.getElementById(id);
+if (fail.innerHTML.indexOf("titan.jpg")<0)
+fail.innerHTML= " <img src='titan.jpg' width='200' height='200'>" ;
+else    
+fail.innerHTML= "  <n  id='textChange' Onclick='textСhangeImage(this.id)' >Нажми на текст</n>" ;}
+
+//Задание 5
+function neWidth(obj)  {   obj.style.width=300; }
+function oldWidth(obj)  {   obj.style.width=200; }
+
+//Задание 6
+function fun(obj)  {   
+obj.style.border = '30px green  double'; }
+
+</script>
+</body>
+</html>

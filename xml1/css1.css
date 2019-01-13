@@ -1,0 +1,43 @@
+specialization{  
+    display:block;
+    text-align:center;
+    margin:10px 20px 10px 20px;
+    margin-top:12pt;
+    border-style:double;
+    border-color:#8C0088;
+    font-size:15pt;
+}
+name{  
+font-weight:bold;
+    font-style:italic;
+    text-align:center;
+}
+TIME{  
+    display:block;
+    text-align:center;
+    border-top:double;
+    border-color:#8C0088;
+}
+EXAM{      
+    display:block;
+    text-align:center;
+    border-top:double;
+    border-color:#8C0088;
+}
+PAGES{  
+    display:block;
+    text-align:center;
+    border-top:double;
+    border-color:#8C0088;
+}
+PASSING{  
+    display:block;
+    text-align:center;
+    border-top:double;
+    border-color:#8C0088;
+}
+faculty{  
+    display:block;
+    margin:40px 80px;
+    border-style:solid;
+}

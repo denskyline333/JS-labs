@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" ?>
+<main>
+  <students>
+    <secondName>Слава</secondName>
+    <firstName>Пашкевич</firstName>
+    <year>2000</year>
+    <average>5</average>
+    </students>
+    <students>
+      <secondName>Калач</secondName>
+      <firstName>Денис</firstName>
+      <year>2000</year>
+      <average>8.5</average>
+  </students>
+</main>

@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>10</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    
+</head>
+<body>
+    <div>
+ 
+        <div class="draggable">
+            <p>задание 1</p>
+            <img src="g2.jpg" width="200px" height="200px">
+        </div>
+        <script>
+            $(function () { $(".draggable *").draggable();}); 
+        </script>
+        
+        <div >
+            <img src="faze.jpg" width="200px" height="200px" style="position:relative" class="faze" onclick="aniLineOne()">
+             <script>
+                 function aniLineOne() {
+                     $('.faze').animate({ left: '400px' }, 1000, function () { $('.faze').animate({ left: '0px' }, 500) });
+                 }
+            </script>
+        </div>
+        
+        <div>
+            <img src="rogue.jpg" width="200px" height="200px" style="position:relative" class="imgThree" onclick="aniLineTwo()">
+            <script>
+                function aniLineTwo() {
+                    $('.imgThree').animate({ left: '250px' }, 1500, function () {
+                        $('.imgThree').animate({ left: '125px', bottom: '50px' }, 1500, function () {
+                            $('.imgThree').animate({ left: '0px', bottom: '0px' }, 1500);
+                        });
+                    });
+                }
+            </script>
+        </div>
+               <div>
+            
+            <form>
+                <input type="radio" name="graph" value="-Math.pow(x, 2) * 0.025">y = x^2<br><br>
+                <input type="radio" name="graph" value="-Math.pow(x, 3) * 0.001">y = x^3<br><br>
+                <input type="radio" name="graph" value="Math.cos(x)">y = cox(x)<br><br>
+                <input type="radio" name="graph" value="Math.sin(x)">y = sin(x)<br><br>
+                <select>
+                    <option>Black</option>
+                    <option>Yellow</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                 </select>
+            </form>
+            <canvas height="400px" width="600px" id="graph" style="margin:auto; display:block;"></canvas>
+            <script>
+                $(function () {
+                    $('#graph')[0].getContext('2d').translate($('#graph')[0].width / 2, $('#graph')[0].height / 2);
+                    $("form input").click(function () {
+                        var graph = $(this).val();
+                        canvas = $('#graph')[0];
+                        ctx = canvas.getContext('2d');
+
+                        ctx.fillStyle = $('select').val();
+
+                        ctx.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+
+                        for (var x = -250; x < 250; x += 0.1) {
+                            var y = eval(graph) * 5;
+                            ctx.beginPath();
+                            ctx.arc(x * 5, y, 1, 0, Math.PI * 2, false);
+                            ctx.closePath();
+                            ctx.fill();
+                        }
+                    })
+                })
+            </script>
+        </div>
+        
+    </div>  
+</body>
+</html>

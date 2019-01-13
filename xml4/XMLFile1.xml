@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml4.xslt"?>
+<students>
+  <choice>
+    <name>Антон</name>
+    <surname>Скорба</surname>
+    <ball>5.2</ball>
+    <data>2003</data>
+  </choice>
+ <choice>
+    <name>Сергей</name>
+    <surname>Петров</surname>
+    <ball>8</ball>
+    <data>1999</data>
+  </choice>
+ <choice>
+    <name>Слава</name>
+    <surname>Пашкевич</surname>
+    <ball>6</ball>
+    <data>2000</data>
+  </choice>
+</students>

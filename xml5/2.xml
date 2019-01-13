@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" ?>
+<main>
+  <students>
+    <secondName>Вырковский</secondName>
+    <firstName>Виталий</firstName>
+    <year>1999</year>
+    <average>6</average>
+  </students>
+  <students>
+    <secondName>Мудревский</secondName>
+    <firstName>Дмитрий</firstName>
+    <year>1998</year>
+    <average>7</average>
+  </students>
+</main>

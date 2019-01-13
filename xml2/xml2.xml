@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="css1.css"?>
+
+<!DOCTYPE faculty SYSTEM "xml2.dtd">
+
+<faculty>
+    <specialization>
+        <name>БГТУ</name>
+        <TIME>220</TIME>
+        <PAGES>88</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+    <specialization>
+        <name>БГУИР</name>
+        <TIME>235</TIME>
+        <PAGES>78</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+    <specialization>
+        <name>БНТУ</name>
+        <TIME>228</TIME>
+        <PAGES>60</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+</faculty>

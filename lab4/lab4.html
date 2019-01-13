@@ -1,0 +1,124 @@
+<html>
+<head>
+</head>
+<script>
+document.write('Задание 1','<br>','<br>');
+function Gruppa(n, spec , kolich ) { 
+this.n=n;
+this.spec=spec;
+this.kolich=kolich;
+this.sub_stud=function sub_stud(k) {
+this.kolich-=k;
+document.write('Из группы №' + this.n + ' исключили '+ k + ' студентов. <br\>'); 
+}
+this.add_stud=function add_stud(k) {
+this.kolich+=k;
+document.write('В группу №' + this.n + ' добавили '+ k + ' студентов. <br\>'); 
+}
+}
+{   
+gr1=new Gruppa(1, 'Исит', 28);
+gr2=new Gruppa(2, 'Поит', 29);
+gr3=new Gruppa(3, 'Поит', 27);
+gr4=new Gruppa(4, 'Исит', 26);
+
+gr1.add_stud(2);
+gr2.sub_stud(4);
+gr3.add_stud(3);
+gr4.sub_stud(1);
+
+document.write(gr1.n,' ',gr1.spec,' ', gr1.kolich,'<br>');
+document.write(gr2.n,' ',gr2.spec,' ', gr2.kolich,'<br>');
+document.write(gr3.n,' ',gr3.spec,' ', gr3.kolich,'<br>');  
+document.write(gr4.n,' ',gr4.spec,' ', gr4.kolich,'<br>'); 
+}
+document.write('<br>','<br>','Задание 2','<br>');
+            function student(name, mat, fiz, inf) {
+                this.name = name;
+                this.mat = mat;
+                this.fiz = fiz;
+                this.inf = inf;
+                this.okno = function () {
+                    alert("name is - " + name);
+                }
+                this.ball = function () {
+                    var sred = (this.mat + this.fiz + this.inf) / 3;
+                    document.write("srednii ball of " + this.name+" = " +sred+"<br>");
+                 
+                }
+            }
+            {
+                stud1 = new student("denis", 4, 6, 8);
+                stud2 = new student('vitalii', 5, 5, 9);
+                student.prototype.kurs = this.kurs;
+                stud1.kurs = 1;
+                stud2.kurs = 2;
+                document.write(stud1.name + stud1.mat + stud1.fiz + stud1.inf+stud1.kurs+"<br>");
+                document.write(stud2.name + stud2.mat + stud2.fiz + stud2.inf+stud2.kurs+"<br>");
+                stud1.ball();
+                stud2.ball();
+                stud1.okno();
+                stud2.okno();
+                
+
+            }
+document.write('<br>','<br>','Задание 3','<br>');
+{
+var mass = new Array(4);
+mass[0] = Math.pow(Math.E,2);
+mass[1] = Math.round(Math.PI,5);
+mass[2] = Math.floor(Math.E,4);
+mass[3] = Math.pow(Math.PI,4);
+                     
+var str = new String('helloworld');
+
+document.write('<br>','Исходный массив:','<br>');
+for (var i = 0; i < mass.length; i++) {
+document.write('array[',i,']=',mass[i],'<br>');
+}
+delete mass[3];
+document.write('<br>','Полученный массив:','<br>');
+for (var i = 0; i < 3; i++) {
+document.write('array[',i,']=',mass[i],'<br>');
+}
+
+if (2 in mass) document.write('<br> Элемент под номером 2 существует','<br>')
+else document.write('<br> Элемента под номером 2 не существует');
+
+if ('spec' in Gruppa) document.write('<br> Элемент spec не существует','<br>')
+else document.write('<br> Элемент spec существует','<br>');
+            
+if (mass instanceof Array) document.write("<br> Объект mass класса Array")
+else document.write("<br> Объект massiv  не класса Array")
+            
+if (mass instanceof String) document.write("<br> Объект mass класса String") 
+else  document.write("<br> Объект massiv  не класса String") 
+            
+if (mass instanceof Object) document.write("<br> Объект mass класса Object")  
+else document.write("<br> Объект massiv не класса Object") 
+            
+if (str instanceof Array) document.write("<br> Объект str класса Array")
+else document.write("<br> Объект str не класса Array")
+            
+if (str instanceof String) document.write("<br> Объект str класса String")    
+else  document.write("<br> Объект str не класса String") 
+            
+if (str instanceof Object) document.write('<br>','Объект str класса Object','<br>')  
+else  document.write("<br> Объект str не класса Object") 
+            
+function fun(){
+return 5;
+}
+document.write('<br>','Тип - ',typeof mass,'<br>');
+document.write('Тип - ',typeof gr1.n,'<br>');
+document.write('Тип - ',typeof gr1.spec,'<br>');
+document.write('Тип - ',typeof gr1.kolich,'<br>');
+document.write('Тип - ',typeof Student,'<br>');
+document.write('Тип - ',typeof stud1.name,'<br>');
+document.write('Тип - ',typeof stud1.surname,'<br>');
+document.write('Тип - ',typeof stud1.physics,'<br>');
+}
+</script>
+<body>
+</body>
+</html>

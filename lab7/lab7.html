@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>7 лаба</title>
+<style>
+body {
+background-color:#008080;
+}
+
+textarea {
+font-family: tahoma;
+font-size: 150%;
+text-shadow: 1px 1px green;
+}
+span{
+color:white;
+}
+</style>
+</head>
+<body>
+<form name="data">
+<fieldset>
+<legend ><span>Форма</span></legend>
+<textarea>Факультет информационных технологий</textarea><br><br>
+<input class="tx" type='text' value="Имя" name='firstname' /><br>
+<input class="tx" type='text' value="Фамилия" name='surname' /><br><br>
+
+<span>Специальность<span>
+<select>
+<option>ИСиТ</option>
+<option>ПОИТ</option>
+<option>ПОИБМС</option>
+<option>ДЭВИ</option>
+</select>
+
+<span>
+<br><br>Курс<br>
+<input type='radio' name='s' value='1' /> 1
+<input type='radio' name='s' value='2' /> 2
+<input type='radio' name='s' value='3' /> 3
+<input type='radio' name='s' value='4' /> 4
+
+</span>
+<p> <span>
+<br>Предметы<br>
+<input type='checkbox' name='check' value='ОИТ'  />ОИТ
+<input type='checkbox' name='check' value='ОАиП ' />ОАиП
+<input type='checkbox' name='check' value='История' />История
+<input type='checkbox' name='check' value='Математика' />Математика
+<input type='checkbox' name='check' value='Физика' />Физика
+</span><br> <br></p>
+
+<input type="submit" value="Submit" >
+<input type="reset" value="Reset"><br><br>
+<input type="button" value="Напечатать" onclick="fun1()">
+<input type="button" value="2-ая форма" onclick="fun2()">
+</fieldset>
+</form>
+
+<script type="text/javascript">
+function fun1() {
+            var d = document.getElementsByName('check');
+            var a="",b="",c="",h="",f=""
+            if (d[0].checked) a=('<li> ОИТ');
+            if (d[1].checked) b=('<li> ОАиП');
+            if (d[2].checked) c=('<li> История');
+            if (d[3].checked) h=('<li> Математика');
+            if (d[4].checked) f=('<li> Физика');
+            document.write(document.forms[0].elements[1].name
+                + "<br> Студент " + document.forms[0].elements[2].value
+                + " " + document.forms[0].elements[3].value
+                + " специальность " + document.forms[0].elements[4].value
+                + " курс " + document.forms[0].s.value
+                + " должен сдавать следующие  предметы: <ul>"+a+b+c+h+f);
+}
+ function fun2() {
+            var d = document.getElementsByName('check');
+            var a = "", b = "", c = "", h = "", f = ""
+            if (d[0].checked) a = ('<option> ОИТ');
+            if (d[1].checked) b = ('<option> ОАиП');
+            if (d[2].checked) c = ('<option> История');
+            if (d[3].checked) h = ('<option> Математика');
+            if (d[4].checked) f = ('<option> Физика');
+            document.write('<form>  <fieldset><legend>Список</legend>Предметы <select>' + a + b + c +h + f + '</select></fieldset></form>')
+        }
+</script>
+</body>
+</html>

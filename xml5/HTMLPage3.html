@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>5 lab</title>
+    <style>
+        body {           
+            font-family: Tahoma;
+            font-size: 130%;
+        }
+        #main {
+            display: block;
+            margin-left:500px;
+            margin-top:100px;
+            width: 45%;
+                    
+            margin-bottom: 3%;
+            
+            text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        span {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            color:purple;
+            padding-top:3%;
+            margin-bottom:2%;
+            padding-bottom:3%;
+        }
+        #nameSpan {
+            margin-top:2%;
+            border:2px solid black;
+            border-radius: 20px 30px;
+            margin-bottom:2%;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <input id="file" type="file" onchange="processFiles()" />
+    <span id="nameSpan">Выберите файл</span>
+</div>
+    <script>
+        function processFiles() {
+            var file = document.getElementById('file').value.split(/(\\|\/)/g).pop();
+            alert(file);
+            if (window.XMLHttpRequest) {
+                var xhr = new XMLHttpRequest(); // 1. Создаём новый объект XMLHttpRequest // 2. Конфигурируем его: GET-запрос на URL 
+            }
+            else {
+                var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xhr.open("GET", file, false); // 2. Конфигурируем его: GET-запрос на URL  false, то запрос производится синхронно, если true – асинхронно. xhr.open(method, URL, async, user, password)
+            xhr.send(); // 3. Отсылаем запрос
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText); // пример вывода: 404: Not Found
+            }
+            else {
+
+                showStudents();
+
+            }
+
+            function showStudents() {
+                var i = (xhr.responseXML.getElementsByTagName("students").length);
+                document.getElementById("nameSpan").innerHTML = "<br> Фамилия - Имя - Год - Средний балл <br/><hr>Студенты:<br><br/>";
+              
+                for (var k = 0; k < i; k++) {
+                
+                    document.getElementById("nameSpan").innerHTML += " - " + xhr.responseXML.getElementsByTagName("secondName")[k].childNodes[0].nodeValue + " ";
+                    document.getElementById("nameSpan").innerHTML += xhr.responseXML.getElementsByTagName("firstName")[k].childNodes[0].nodeValue + ", ";
+                    document.getElementById("nameSpan").innerHTML += xhr.responseXML.getElementsByTagName("year")[k].childNodes[0].nodeValue + "г, ";
+                    document.getElementById("nameSpan").innerHTML += xhr.responseXML.getElementsByTagName("average")[k].childNodes[0].nodeValue + " " + "<br>";
+                }
+                      
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="3.xslt"?>
+
+<faculty>
+    <specialization>
+        <name>БГТУ</name>
+        <TIME>220</TIME>
+        <PAGES>88</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+    <specialization>
+        <name>БГУИР</name>
+        <TIME>235</TIME>
+        <PAGES>78</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+    <specialization>
+        <name>БНТУ</name>
+        <TIME>228</TIME>
+        <PAGES>60</PAGES>
+        <PASSING>Минск</PASSING>
+    </specialization>
+</faculty>

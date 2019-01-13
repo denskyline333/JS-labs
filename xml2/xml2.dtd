@@ -1,0 +1,10 @@
+
+
+<!DOCTYPE faculty [
+<!ELEMENT faculty (specialization)>
+<!ELEMENT specialization (name,TIME,PAGES,PASSING)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT TIME (#PCDATA)>
+<!ELEMENT PAGES (#PCDATA)>
+<!ELEMENT PASSING (#PCDATA)>
+]>

@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <canvas id='drawgist' width='400' height='400' style="border: 2px solid black"> </canvas>
+    <script>
+        var canvas = document.getElementById("drawgist");
+        var x = canvas.getContext("2d");
+        x.strokeStyle = "blue";
+        x.beginPath();
+        x.moveTo(80, 20);
+        x.lineTo(80, 300);
+        x.stroke();
+        x.beginPath();
+        x.moveTo(80, 300);
+        x.lineTo(350, 300);
+        x.stroke();
+        x.font = '15px Verdana';
+        x.fillText("Годы", 5, 160);
+        x.fillText("Школа", 100, 320);
+        x.fillText("Универ", 180, 320);
+        x.fillText("Д-сад", 260, 320);
+        x.fillStyle = "green";
+        x.strokeStyle = "#FF45FF"
+        x.fillText("12", 55, 70);
+        x.fillText("9", 60, 130);
+        x.fillText("6", 60, 190);
+        x.fillText("3", 60, 250);
+        x.fillStyle = "red";
+        x.fillRect(100, 230, 50, 70);
+        var grad = x.createLinearGradient(80, 20, 0, 250);
+        grad.addColorStop(0.0, 'yellow');
+        grad.addColorStop(1.0, 'aqua');
+        x.fillStyle = grad;
+        x.fillRect(180, 70, 50, 230);
+        var gr = x.createLinearGradient(50, 100, 0, 200);
+        gr.addColorStop(0.0, 'purple');
+        gr.addColorStop(1.0, 'yellow');
+        x.fillStyle = gr;
+        x.fillRect(260, 180, 50, 120);
+    </script>
+    <canvas id="diag" width="600" height="400" style="border:2px solid black"></canvas>
+    <script>
+        var canvas = document.getElementById("diag");
+        var x = canvas.getContext("2d");
+        x.beginPath();
+        x.arc(150, 250, 100, 0.2 * Math.PI, 2.5 * Math.PI);
+        x.stroke();
+        x.fillStyle = "purple";
+        x.beginPath();
+        x.arc(150, 250, 100, -Math.PI / 180 * 360, 0, false);
+        x.lineTo(150, 250);
+        x.fill();
+        x.fillStyle = "green";
+        x.beginPath();
+        x.arc(150, 250, 100, -Math.PI / 180 * 200, 0, false);
+        x.lineTo(150, 250);
+        x.fill();
+        x.fillStyle = "yellow";
+        x.beginPath();
+        x.arc(150, 250, 100, -Math.PI / 180 * 170, 0, false);
+        x.lineTo(150, 250);
+        x.fill();
+        x.fillStyle = "aqua";
+        x.beginPath();
+        x.arc(150, 250, 100, -Math.PI / 180 * 100, 0, false);
+        x.lineTo(150, 250);
+        x.fill();
+        x.font = '30px Times';
+        x.fillStyle = "black";
+        x.shadowOffsetX = 3;
+        x.shadowOffsetY = 7;
+        x.shadowBlur = 3;
+        x.shadowColor = 'orange';
+        x.fillText("Количество посещенных", 100, 50);
+        x.fillText("дней в стране", 150, 80);
+        x.shadowOffsetX = 0;
+        x.shadowOffsetY = 0;
+        x.shadowBlur = 0;
+        x.fillStyle = "aqua";
+        x.fillRect(300, 160, 20, 20);
+        x.fillStyle = "green";
+        x.fillRect(300, 210, 20, 20);
+        x.fillStyle = "purple";
+        x.fillRect(300, 260, 20, 20);
+        x.fillStyle = "yellow";
+        x.fillRect(300, 310, 20, 20);
+        x.fillStyle = "black";
+        x.fillText("Россия - 27 дней", 330, 180);
+        x.fillText("Китай - 7 дней", 330, 230);
+        x.fillText("Германия - 42 дня", 330, 280);
+        x.fillText("Турция - 18 дней", 330, 330);
+
+    </script>
+    <br />
+    <form name="data">
+        <fieldset>
+            <legend>Форма</legend>
+            <label for="em">Email</label>
+            <input type="email" autofocus id="em" name="email" value="email" /><br />
+            <label>URL</label>
+            <input type="url" /><br />
+            <label for="tel">Номер телефона:</label>
+            <input id="tel" value="+375" name="tel" type="tel" /><br />
+            <label>Номера чисел</label>
+            <input type="number" step="1" /><br />
+            <label>Поле интервала</label>
+            <input type="range" /><br />
+            <label>Цвет</label>
+            <input type="color" /><br />
+            <label>Дата и время</label>
+            <input type="date">
+            <input type="time" />
+
+            <br />
+            <label for="obj">Выберите предмет:</label>
+            <input list="objects" id="obj" name="obj" />
+            <datalist id="objects">
+                <option value="Математика">
+                <option value="КЯР">
+                <option value="ОАиП">
+                <option value="История"></option>
+            </datalist>
+            <br />
+        </fieldset>
+    </form>
+
+    <fieldset form="data">
+        <label>Поиск</label>
+        <input type="search" placeholder="Google" /><br />
+    </fieldset>
+    <br />
+
+    <label>Поле output:</label>
+    <form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+        <input name="a" type="number" step="any"> +
+        <input name="b" type="number" step="any"> =
+        <output name="o"></output>
+    </form>
+    <br /><br /><br />
+
+    <header>
+        <h1>Моя последняя лабораторная</h1>
+    </header>
+    <nav>
+        <figure>
+            <img src='denis.jpg' width='300' height='230' />
+            <figcaption>Моя фотография </figcaption>
+        </figure>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Фото</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <footer>
+        Калач Денис Дмитриевич   <input type="button" value="Данные" onclick="fun1()">
+    </footer>
+
+    <script>
+        function fun1() {
+            alert("Калач Денис Дмитриевич, 1 курс, 6 группа, EMAIL: " + document.forms[0].elements[1].value
+                + " ТЕЛЕФОН: " + document.forms[0].elements[3].value);
+        }
+    </script>
+</body>
+</html>

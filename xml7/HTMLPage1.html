@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .green{
+            margin:30px 60px;
+            padding-top:50px;
+            padding-left:50px;
+        }
+    
+    </style>
+</head>
+<body>
+    <svg width="400" height="200">
+        <circle cy="50" r="50" cx="50" fill="red">
+            <animate attributeName="cx" from="50" to="300" begin="click" dur="2s" />
+            <animate attributeName="cx" from="300" to="50" begin="click+2" dur="2s" />
+        </circle>
+        </svg>
+    <br />
+        <svg class="green" width="1050" height="400" >
+            <circle cy="50" r="50" cx="50" fill="green" stroke="maroon" stroke-width="3" stroke-dasharray="20 5" stroke-dashoffset="30">
+                <animate attributeName="r" from="50" to="100" begin="mouseover" dur="2s" />
+                <animate attributeName="r" from="100" to="50" begin="mouseover+2" dur="2s" />            
+                <animate attributeName="stroke-dashoffset" from="30" to="0" begin="mouseover" end="mouseover+2" dur="2s" />
+            </circle>
+       
+        <rect x="245" y="5" width="200" height="100" fill="gold" stroke="purple" stroke-width="5">
+            <animate attributeName="x" from="245" to="600" begin="mouseover" dur="3s" />
+            <animate attributeName="x" from="600" to="245" begin="mouseover+3" dur="3s" />
+            <animate attributeName="fill" from="gold" to="aqua" begin="mouseover" dur="3s" />
+            <animate attributeName="fill" from="aqua" to="gold" begin="mouseover+3" dur="3s" />
+            <animate attributeName="stroke-width" from="5" to="10" begin="mouseover" dur="3s" />
+            <animate attributeName="stroke-width" from="10" to="5" begin="mouseover+3" dur="3s" />
+        </rect>
+</svg>
+    
+</body>
+</html>

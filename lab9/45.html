@@ -1,0 +1,114 @@
+<html>
+<style>
+div {
+ position: absolute;
+}
+</style>
+<form>
+<label><input type='radio' name='s' value='1' /> y=x2</label>
+<label><input type='radio' name='s' value='2' /> y=x3</label>
+<label><input type='radio' name='s' value='3' /> y=sin(x)</label>
+<label><input type='radio' name='s' value='4' /> y=cos(x)</label>
+<br><span>Цвет</span>
+<input id="colors" type="color" value="#000000" list="colorsList" />
+<datalist id="colorsList">
+<option>#ff0000</option>
+<option>#0000ff</option>
+<option>#00ff00</option>
+<option>#ffff00</option>
+<option>#00ffff</option>
+</datalist>
+<br><input type="button" value="Построить" onclick="build()">
+</form>
+<p></p>
+
+<script type="text/javascript">
+function build(){
+var fun = Number(document.forms[0].s.value);
+var color = document.getElementById('colors').value;
+if (fun == 1)   x2(1366,768,color);
+if (fun == 2)   x3(1366,768,color);
+if (fun == 3)   sinX(1366,768,color);
+if (fun == 4) cosX(1366, 768, color);
+}
+
+function x2 (width,height,color){
+//Центр экрана
+var str = ""
+x0 = width/2;
+y0 = height/2;
+//Масштаб
+kx = width/20;
+ky = height/10;
+str += ("<font color=" + color + ">");
+//Оси координат
+for (i=1; i<width; i=i+20) str +=( " <div style='top: " +y0+ " ; left: " +i+ " '>_</div> " );
+for (i=1; i<height; i=i+20) str +=( " <div style='left: " +x0+ " ; top: " +i+ " '>|</div> " );
+//y=sin(x)
+for ( x = - 10; x < 10; x = x + 0.01 ){
+y=x*x;
+str +=("<div style='left:"+(x0+kx*x)+";top:"+(y0-ky*y +3)+" '>.</div>");
+}   document.getElementsByTagName('p')[0].innerHTML = str;
+}
+
+function x3 (width,height,color){
+//Центр экрана
+var str = ""
+x0 = width/2;
+y0 = height/2;
+//Масштаб
+kx = width/20;
+ky = height/10;
+str += ("<font color=" + color + ">");
+//Оси координат
+for (i=1; i<width; i=i+20) str +=( " <div style='top: " +y0+ " ; left: " +i+ " '>_</div> " );
+for (i=1; i<height; i=i+20) str +=( " <div style='left: " +x0+ " ; top: " +i+ " '>|</div> " );
+//y=sin(x)
+for ( x = - 10; x < 10; x = x + 0.01 ){
+y=x*x*x;
+ str +=("<div style='left:"+(x0+kx*x)+";top:"+(y0-ky*y +3)+" '>.</div>");
+}
+document.getElementsByTagName('p')[0].innerHTML = str;
+}
+
+function sinX (width,height,color){
+//Центр экрана
+var str = ""
+x0 = width/2;
+y0 = height/2;
+//Масштаб
+kx = width/20;
+ky = height/10;
+
+str += ("<font color=" + color + ">");
+//Оси координат
+for (i=1; i<width; i=i+20) str +=( " <div style='top: " +y0+ " ; left: " +i+ " '>_</div> " );
+for (i=1; i<height; i=i+20) str +=( " <div style='left: " +x0+ " ; top: " +i+ " '>|</div> " );
+//y=sin(x)
+for ( x = - 10; x < 10; x = x + 0.01 ){
+y=Math.sin(x);
+str +=("<div style='left:"+(x0+kx*x)+";top:"+(y0-ky*y +3)+" '>.</div>");
+}   document.getElementsByTagName('p')[0].innerHTML = str;
+}
+
+function cosX (width,height,color){
+//Центр экрана
+var str = ""
+ x0 = width/2;
+y0 = height/2;
+//Масштаб
+kx = width/20;
+ky = height/10;
+
+str += ("<font color=" + color + ">");
+//Оси координат
+for (i=1; i<width; i=i+20) str +=( " <div style='top: " +y0+ " ; left: " +i+ " '>_</div> " );
+for (i=1; i<height; i=i+20) str +=( " <div style='left: " +x0+ " ; top: " +i+ " '>|</div> " );
+//y=sin(x)
+for ( x = - 10; x < 10; x = x + 0.01 ){
+y=Math.cos(x);
+str +=("<div style='left:"+(x0+kx*x)+";top:"+(y0-ky*y +3)+" '>.</div>");
+}   document.getElementsByTagName('p')[0].innerHTML = str;
+}
+</script>
+</html>

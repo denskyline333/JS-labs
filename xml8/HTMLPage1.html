@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <svg width="200" height="300">
+        <text x="20" y="50" transform="rotate(30 20,40)" stroke="red" letter-spacing="3px" font-size="130%"> This 
+        <tspan dy="10"  stroke="blue" style="font-family:Arial;">blue</tspan>
+            <tspan dy="-10">is a text</tspan>
+        </text>        
+    </svg>
+    <br />
+    <svg width="450" height="450">
+        <path id="tet" fill="none" stroke="green"
+              d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,
+131.91,264,150c40.67,14.43,108.57-6.91,229-145"/>
+
+
+        <text>
+            <textPath href="#tet">
+                This will <tspan font-size="120%" style="font-family:Tahoma;" textLength="40" lengthAdjust="spacingAndGlyphs"> be something new</tspan>be a new super general<tspan stroke="purple"> insanity unbelievable</tspan>  text </textPath>
+        </text>
+    </svg>
+
+</body>
+</html>

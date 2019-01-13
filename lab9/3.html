@@ -1,0 +1,25 @@
+<html>
+<img src=g2.jpg width="200px" height="200px" id="fst" style="position:absolute;" onclick="curvemove('fst')">
+<script>
+function curvemove(gto) { 
+var x = 2
+var y = 2   
+var corG = 0
+var corY = "y"
+var corX = "x"
+var timer = setInterval(function () {
+if (corG == 0) y++, x+=2;
+if (x == 500) corG = 1;
+if (corG == 1) x--;
+if (x == 0) corG = 2;
+if (corG == 2) y--;
+
+document.all[gto].style.left = eval(corX)
+document.all[gto].style.top = eval(corY)
+if (y == 0) clearInterval(timer);
+}, 1);
+}
+
+</script>
+
+</html>
